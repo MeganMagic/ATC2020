@@ -35,29 +35,29 @@
 ---
 ## 기능 별 개발 계획 및 진행 상황
 ### 0. react에서 jquery plugin 사용 방법
-    - 결론 : 가능하다.
-    - https://ko.reactjs.org/docs/integrating-with-other-libraries.html
+- 결론 : 가능하다.
+- https://ko.reactjs.org/docs/integrating-with-other-libraries.html
 
 ### 1. 작품 로드하기
-    - data.json import 후 map하여 element 생성
-    - Component Mount 시점에서 전제 data import 할 경우 로딩 시간 발생 문제
-        1. axios를 이용하여 로딩 화면 구현한다
-        2. 상위 1개의 데이터 로드 완료 후, 나머지 데이터 로드
-        3. 상위 3개의 데이터만 로드 후, 3번째 작품 도착시 데이터 3개 또 로드하기 (페이지 과부하 문제도 고려)
+- data.json import 후 map하여 element 생성
+- Component Mount 시점에서 전제 data import 할 경우 로딩 시간 발생 문제
+    1. axios를 이용하여 로딩 화면 구현한다
+    2. 상위 1개의 데이터 로드 완료 후, 나머지 데이터 로드
+    3. 상위 3개의 데이터만 로드 후, 3번째 작품 도착시 데이터 3개 또 로드하기 (페이지 과부하 문제도 고려)
 
-    - _이전처럼 그냥 작품 상세페이지 입장하는 걸로 할까? ㅠ.ㅠ_
+- _이전처럼 그냥 작품 상세페이지 입장하는 걸로 할까? ㅠ.ㅠ_
 
-    - _Idea 제안 : 작품을 1개씩만 로딩하면?_
-        - scroll이 바닥에 닿았을 때 다음 작품을 로딩
-        - prev 작품 component가 fade out 되고, next 작품 compomnent가 fade in 되어서 들어오는 걸로
+- _Idea 제안 : 작품을 1개씩만 로딩하면?_
+    - scroll이 바닥에 닿았을 때 다음 작품을 로딩
+    - prev 작품 component가 fade out 되고, next 작품 compomnent가 fade in 되어서 들어오는 걸로
 
 ### 2. Navigation으로 위치 이동
-    - _*1번 작품 감상 중 20번 작품 클릭 시, 어떻게 하죠?_
-    - 1부터 20번위치까지 후후후후루루루ㅜ루루루루루룩 이동하는거 개인적으로 너무 꼴보기 싫음.
-    - 위의 3번 방법 선택하는 경우, 20번부터 하위 3개의 데이터를 로드하는 것으로???
+- _*1번 작품 감상 중 20번 작품 클릭 시, 어떻게 하죠?_
+- 1부터 20번위치까지 후후후후루루루ㅜ루루루루루룩 이동하는거 개인적으로 너무 꼴보기 싫음.
+- 위의 3번 방법 선택하는 경우, 20번부터 하위 3개의 데이터를 로드하는 것으로???
 
 ### 3. 작품 검색하기
-    - javascript filter 이룔
-    - 구현 reference : https://ndb796.tistory.com/254
+- javascript filter 이룔
+- reference : https://ndb796.tistory.com/254
 ---
 ## 할 것
