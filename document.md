@@ -2,7 +2,7 @@
 <br/>
 
 
-## 페이지 구성 및 페이지별 기능 정리
+## 페이지 구성
 ### 1. 메인 Main
 - 로고, 타이틀
 - Link to: 전시보기
@@ -33,7 +33,7 @@
 - 
 
 ---
-## 기능 별 개발 계획 및 진행 상황
+## 기능 별 개발 계획
 ### 0. react에서 jquery plugin 사용 방법
 - 결론 : 가능하다.
 - https://ko.reactjs.org/docs/integrating-with-other-libraries.html
