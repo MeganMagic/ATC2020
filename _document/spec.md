@@ -9,6 +9,7 @@
 
 ## 2. 전시 보기
 - 작품 내용
+
     __1안. 무한 스크롤로 보기__
     - reference : 트위터
     - data.json import 후 map하여 element 생성
