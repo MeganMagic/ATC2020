@@ -52,7 +52,11 @@
     - scroll이 바닥에 닿았을 때 다음 작품을 로딩
     - prev 작품 component가 fade out 되고, next 작품 compomnent가 fade in 되어서 들어오는 걸로
 
-### 2. Navigation으로 위치 이동
+### 2. Navigation
+- data 객체에서 {id,title}만 포함하는 객체 배열로 추출한 후, Navagation Component의 Props로 전달.
+- 전달된 title을 map()을 이용해 li태그로 만듬
+- 해당 title li가 클릭 되었을 때 Tour의 state.currID를 변경 (onClick)
+
 - _*1번 작품 감상 중 20번 작품 클릭   시, 어떻게 하죠?_
     - 1부터 20번위치까지 후후후후루루루ㅜ루루루루루룩 이동하는거 개인적으로 너무 꼴보기 싫음.
 
