@@ -1,4 +1,5 @@
-# ATC 2020 WEB 개발<br/>
+# ATC 2020 WEB 개발
+<br/>
 
 
 ## 페이지 구성
@@ -52,11 +53,11 @@
     - prev 작품 component가 fade out 되고, next 작품 compomnent가 fade in 되어서 들어오는 걸로
 
 ### 2. Navigation으로 위치 이동
-- _*1번 작품 감상 중 20번 작품 클릭 시, 어떻게 하죠?_
+- _*1번 작품 감상 중 20번 작품 클릭   시, 어떻게 하죠?_
     - 1부터 20번위치까지 후후후후루루루ㅜ루루루루루룩 이동하는거 개인적으로 너무 꼴보기 싫음.
 
 ### 3. 작품 검색하기
 - javascript filter 이룔
-- reference : https://ndb796.tistory.com/254
+- reference : https://ndb796.tistory.com/254 
 ---
 ## 할 것
