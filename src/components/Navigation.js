@@ -1,9 +1,13 @@
 import React from 'react';
 
-function Navigation (){
+function Navigation ( {indexList, move} ){
     return(
         <div>
-            Navigation
+            <ul>
+                {indexList.map( (title, num) => (
+                    <li key = {num} onClick={move}>{title}</li>
+                ))}
+            </ul>
         </div>
     );
 }

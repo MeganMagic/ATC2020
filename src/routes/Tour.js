@@ -2,10 +2,13 @@ import React, {Component} from 'react';
 import Data from '../data.json';
 //import './css/Tour.css';
 
+import Navigation from '../components/Navigation';
+import Content from '../components/Content';
+
 class Tour extends Component{
     constructor(props){
         super(props);
-        this.state.curr = 0;
+        this.state = {curr: 0};
     }
     
     getData(idnum) {
@@ -16,10 +19,14 @@ class Tour extends Component{
         return data.map( x => x.title );
     }
 
+
+
     render(){
+        const index = this.getIndex(Data);
         return(
             <div className="container">
-                <Navigation  />
+                <div>NOW ID : {this.state.curr} </div>
+                <Navigation  indexList={index} move={}/>
                 <Content />
             </div>
         );
