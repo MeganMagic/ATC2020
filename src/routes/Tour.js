@@ -22,11 +22,11 @@ class Tour extends Component{
 
 
     render(){
-        const index = this.getIndex(Data);
+        const indexList = Data.map(x => ({id: x.id, title: x.title}) );
         return(
             <div className="container">
                 <div>NOW ID : {this.state.curr} </div>
-                <Navigation  indexList={index} move={}/>
+                <Navigation  indexList={indexList} curr={this.state.curr}/>
                 <Content />
             </div>
         );
