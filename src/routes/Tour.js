@@ -49,8 +49,6 @@ class Tour extends Component{
 
 
     render(){
-        const indexList = Data.map(x => ({id: x.id, title: x.title}) );
-
         return(
             <div className="container">
                 
