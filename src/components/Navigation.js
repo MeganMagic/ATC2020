@@ -22,9 +22,6 @@ class Navigation extends Component {
         console.log(this.key);
     }
 
-    componentDidUpdate(){
-        console.log(this.state);
-    }
 
     render(){
         return(

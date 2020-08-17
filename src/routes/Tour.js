@@ -1,38 +1,87 @@
 import React, {Component} from 'react';
 import Data from '../data.json';
-//import './css/Tour.css';
+import '../css/Tour.css';
+import 'animate.css';
 
-import Navigation from '../components/Navigation';
-import Content from '../components/Content';
+
+//import Navigation from '../components/Navigation';
+import ScrollTester from '../components/ScrollTester';
+//import Content from '../components/Content';
 
 class Tour extends Component{
     constructor(props){
         super(props);
-        this.state = {curr: 0};
+        this.state = {
+            currContent: 0        
+        };
+        this.getScrollPosition = this.getScrollPosition.bind(this);
     }
     
-    getData(idnum) {
-        return ( Data[idnum] );
-    };
+    getScrollPosition(event){
+        const getContentID = event.target.getAttribute('data_to_pass');
 
-    getIndex(data) {
-        return data.map( x => x.title );
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const elementPosition = document.querySelector(getContentID).offsetTop;
+        const clientHeight = document.documentElement.clientHeight;
+
+        console.log(scrollPosition, getContentID, elementPosition);
+        console.log("바닥 위치 :", elementPosition + clientHeight);
+
+        window.scrollTo({top:elementPosition + clientHeight, behavior:'smooth'});
     }
 
+    // componentDidMount(){
+    //     window.addEventListener('scroll', this.onScroll);
+    // }
+    // onScroll = (e) => {
+    //     const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
+    //     this.setState({ scrollTop });
+
+    //     const nthContent = parseInt( (scrollTop + 100) / document.documentElement.clientHeight);
+    //     if( this.state.currContent !== nthContent){
+    //         console.log(nthContent);
+    //         this.setState({currContent : nthContent});
+    //     }
+    // }
+    // componentWillUnmount(){
+    //     window.removeEventListener(this.onScroll);
+    // }
 
 
     render(){
         const indexList = Data.map(x => ({id: x.id, title: x.title}) );
+
         return(
             <div className="container">
-                <div>NOW ID : {this.state.curr} </div>
-                <Navigation  indexList={indexList} curr={this.state.curr}/>
-                <Content />
+                
+                <ScrollTester 
+                    scrollTop = {this.state.scrollTop}  
+                    currContent = {this.state.currContent}              
+                />
+
+
+                {Data.map((d, index) => (
+                    <div 
+                        className="content 
+                            animate__animated 
+                            animate__fadeIn" 
+                        id={`content${index}`}
+                    >
+                        {d.title} <br/>
+                        {d.genre} <br/>
+                        {d.desc} <br/>
+                        {d.artist.map(a => <span>{`${a}  `}</span>)} <br/><br/>
+
+                        <button 
+                            onClick={this.getScrollPosition} 
+                            data_to_pass={`#content${index}`}
+                        >
+                                scroll position
+                        </button>
+                    </div>
+                ))}
             </div>
         );
-        //1. navigation
-
-        //2. Content
     }
 }
 

@@ -1,0 +1,14 @@
+.preview{
+    width : 100%;
+    background-color: #eeeeee;
+    margin : 100px auto;
+    padding : 25px;
+    text-align: center;
+}
+.preview ul {
+    list-style: none;
+    padding : 0;
+}
+.preview ul li{
+    display: inline;
+}
