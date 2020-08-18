@@ -70,7 +70,7 @@ class Home extends React.Component {
                 <Row className="justify-content-md-center">
                     <Col lg={4} >
                         {/* 언어에 따라 Link path 다르게 하기 */}
-                        <Link to="/tour">
+                        <Link to="/tour3">
                             <MyButton message={this.state.value==="ko" ? ko.exhibit : en.exhibit}/>
                         </Link>
                     </Col>
