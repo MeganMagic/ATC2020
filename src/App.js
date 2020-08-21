@@ -6,6 +6,7 @@ import Home from './routes/Home';
 import Tour from './routes/Tour';
 import Tour2 from './routes/Tour2';
 import Tour3 from './routes/Tour3';
+import Detail from './routes/Detail';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/tour" exact={true} component={Tour} />
       <Route path="/tour2" exact component={Tour2} />
       <Route path="/tour3" exact component={Tour3} />
+      <Route path="/detail" exact component={Detail} />
     </HashRouter>
   );
 }
