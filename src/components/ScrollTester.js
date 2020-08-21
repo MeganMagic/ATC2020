@@ -20,6 +20,12 @@ class ScrollTester extends React.Component{
             }
         );
     }
+    componentWillUnmount(){
+        window.removeEventListener('scroll', () => {
+            this.onScroll();
+            this.checkScrollDir();
+        });
+    }
 
     render(){
         
