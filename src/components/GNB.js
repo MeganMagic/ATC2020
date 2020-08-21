@@ -1,10 +1,9 @@
 import React from 'react';
+import '../css/GNB.css';
 
 import _ from 'lodash';
-import {Row, Col} from 'react-bootstrap';
 import withStyles, {css} from '../withStyles';
 import 'animate.css/animate.min.css';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 
 class GNB extends React.Component{
@@ -25,6 +24,7 @@ class GNB extends React.Component{
         if ( newScrollTop < 200) {
             this.setState({show : true});
         }
+        //2. 올리기 시작하면 나타난다.
         else if ( this.state.scrollTop - newScrollTop > 0 && this.state.show === false){
             this.setState({show : true});
         }
@@ -33,31 +33,32 @@ class GNB extends React.Component{
             this.setState({show : false});
         }
         this.setState({scrollTop : newScrollTop});
-    }, 500)
+    }, 400)
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.checkScrollDir );
+    }
 
     render(){
-        const comp = (
-            <Row className="gnb" >
-                <Col lg {...css(this.props.styles.gnb)}>
-                    <h1>GNB</h1>
-                </Col> 
-            </Row>
-        );
 
         return(
-            this.state.show === true ? comp : false
-        )
+            <div className={['gnb', !this.state.show && 'gnbShow'].join(' ')}>
+                <div  {...css(this.props.styles.gnb)} >
+                    <h1>GNB</h1>
+                </div>
+            </div>
+        );
     }
     
 }
 
 export default withStyles(({color, size}) => ({
     gnb : {
+        width : "100%",
+        height : "100%",
+
         backgroundColor : color.primaryLight,
         color : color.backgroundLight,
-        textAlign : "center",
-        position : "fixed",
-        zIndex : 5,
     }
 
 }))(GNB);
