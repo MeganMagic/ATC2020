@@ -45,7 +45,7 @@ class Home extends React.Component {
                 <Row className="justify-content-md-center" 
                     style={{marginBottom:"80px"}}
                 >
-                    <Col lg = {6} >
+                    <Col md = {6} lg = {6} >
                         <p className='about-summary'>
                             {this.state.value === "ko" ? ko.intro : en.intro}
                         </p>
@@ -63,12 +63,11 @@ class Home extends React.Component {
                             <option value="en">English</option>
                         </select>
 
-
                     </Col>
                 </Row>
 
                 <Row className="justify-content-md-center">
-                    <Col lg={4} >
+                    <Col md = {4} lg={4} >
                         {/* 언어에 따라 Link path 다르게 하기 */}
                         <Link to="/tour3">
                             <MyButton message={this.state.value==="ko" ? ko.exhibit : en.exhibit}/>
