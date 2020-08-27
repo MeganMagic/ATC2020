@@ -1,0 +1,10 @@
+.detail{
+    text-align: center;
+}
+.detail ul {
+    list-style: none;
+}
+.detail ul li {
+    display: inline;
+    margin-right: 2em;
+}
