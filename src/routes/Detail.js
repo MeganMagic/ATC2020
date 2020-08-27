@@ -4,54 +4,65 @@ import GNB from '../components/GNB';
 import '../css/Detail.css';
 
 import withStyles, {css} from '../withStyles';
-import queryString from 'query-string';
+import {Link} from 'react-router-dom';
 
 class Detail extends React.Component{
     constructor(props){
         super(props);
-        const queryID = queryString.parse(this.props.location.search).id * 1;
+        const queryID = this.props.match.params.key * 1;
+        const data = DATA.filter( ({id}) => id === queryID )[0];
         this.state = {
             contentID : queryID,
+            data : data,
         };
+
+        window.scrollTo(0,0);
     }
 
-    render(){
-        const data = DATA.filter( 
-            ({ id }) => id === this.state.contentID 
-        )[0];
 
+
+    render(){
         const width = document.documentElement.clientWidth;
         const iframe = (url) => (
-            <iframe 
-                title={data.title} 
-                width={width} height={width*0.5625}
-                src={url} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen>    
+            <iframe title={data.title} width={width} height={width*0.5625}
+                src={url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>    
             </iframe>
-        );
-        console.log(data);
-        console.log(this.state);
+        );        
 
+        const { data } = this.state;
+        console.log(this.props.match.params);
         return(
-            <div {...css(this.props.styles.light)}>
+            <div className="detail" >
                 <GNB />
-                <h1>{this.state.contentID}</h1>
-                <h1>detail page</h1>
-                <h2>제목 - {data.title}</h2>
-                <h6>장르 - {data.genre}</h6>
-                <h6>작가 - {data.artist}</h6>
-                <h2>소개영상 </h2>
-                {iframe(data.introVideo)}
+
+                <div className="wrapper">
+                    <div className="detail-info">
+                        <h1>{this.state.contentID}</h1>
+                        <h1>{data.title}<br/></h1>
+                        <ul>{data.artist.map((a, i) => <li key={i}>{a}</li> )}</ul>
+                        <span>{data.genre}</span>
+                    </div>
+                    <div className="detail-content">
+                        {iframe(data.introVideo)}
+
+                        {data.desc.split('<br/>').map((line) => {
+                        return (<span>{line}<br/><br/></span>)
+                        })}
+                    </div>
+                </div>
+
                 
-                <h5>작품 내용</h5>
-                {data.desc.split('<br/>').map((line) => {
-                    return (<span>{line}<br/><br/></span>)
-                } )}
+                <div>
+                    <Link to="/detail/3">다음 작품으로</Link>
+                </div>
+                
+                
+                
             </div>
         );
     }
+
+    
 
 }
 
