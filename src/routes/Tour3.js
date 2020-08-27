@@ -24,7 +24,7 @@ class Tour3 extends React.Component{
                             {data.genre}<br/>
                         </div>
                         <div>
-                            <Link to={`/detail?id=${data.id}`}>Detail</Link>
+                            <Link to={`/detail2?id=${data.id}`}>Detail</Link>
                         </div>
                     </div>
                 ) )}
