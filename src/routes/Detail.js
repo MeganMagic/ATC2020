@@ -30,7 +30,6 @@ class Detail extends React.Component{
         );        
 
         const { data } = this.state;
-        console.log(this.props.match.params);
         return(
             <div className="detail" >
                 <GNB />
