@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/Tour.css';
 import ScrollTester from '../components/ScrollTester';
-import Preview from '../components/Preview';
 import Data from '../data.json';
 
 //module
@@ -38,7 +37,7 @@ class Tour2 extends React.Component{
                         animateIn="fadeIn"
                         duration={1}    
                     >
-                        <Preview 
+                        <div
                             contentId = {data.id}
                             title = {data.title}
                             artist = {data.artist}

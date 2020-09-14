@@ -20,6 +20,7 @@ function Home2(props){
                 <h1>ATC 2020</h1>
             </div>
 
+
             <div>
                 <h3>언어 선택</h3>
                 <h4>

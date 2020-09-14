@@ -1,0 +1,80 @@
+.myContainer{
+    width : 4000px;
+    height : 100vh;
+    margin : 0;
+}
+.myContainer .level{
+    font-size: 120px;
+    font-weight: bold;
+    position: absolute;
+    top : 18px;
+    
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color : white; */
+}
+
+.myContainer .content{
+    width : 4000px;
+    height: 100%;
+    padding-top: 56px;
+
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.myContainer .content .item{
+    white-space: normal;
+    margin-right : 117px;
+}
+.myContainer .content .item:first-child{
+    margin-left : 224px;
+}
+/* ----------------------------------------------------- */
+/* .item-text{
+    width : 330px;
+    margin-top: 74px;
+    display: block;
+}
+.item-text .title{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 26px;
+}
+.item-text .text-content{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: normal;
+    color : #000000;
+}
+
+.item-text .sub-title{
+    font-size : 50px;
+    font-weight: bold;
+    margin-bottom : 18px;
+}
+.item-text .sub-title-line{
+    width : 120px;
+    margin-top : 90px;
+    margin-bottom : 25px;
+    position : relative;
+    left : -14px;
+} */
+/* -------------------------------------------- */
+/* .item-entrance{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width : fit-content;
+
+    margin-top: 74px;
+    margin-bottom: auto;
+}
+.item-entrance .img{
+    width : 360px;
+}
+.item-entrance .info{
+    width : 215px;
+} */
