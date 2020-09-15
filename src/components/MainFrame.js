@@ -1,6 +1,9 @@
-import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+// import { Link } from 'react-router-dom';
 import '../css/MainFrame.css';
+
+import GNB from './GNB';
+import Navigation from './Navigation';
 
 
 function MainFrame(props){    
@@ -9,7 +12,6 @@ function MainFrame(props){
     const subTitleLine = require('../data/sub-title-line.png');
     const entranceImg = require('../data/item-img.png');
 
-    let pos = 0;
     const myRef = useRef(null);
 
     const scrollChanger = (e) => {
@@ -32,11 +34,7 @@ function MainFrame(props){
 
     const levelIndex = [6, '치즈', '투영', '이 게임은 처음부터 내가 졌어', 'DreamCatcher', 7];
 
-    const [navToggle, setNavToggle] = useState(false);
-    const toggleNav = () => {
-        setNavToggle(!navToggle);
-        console.log(navToggle);
-    }
+    
 
     return(
         <div className="mainFrame">
@@ -45,9 +43,9 @@ function MainFrame(props){
                     <div className="title">독립적</div>
                     <div className="desc">{ipsum1}</div>
                 </li>
-              
+            
                 <li className="item-text">
-                    <img className="sub-title-line" src={subTitleLine} />
+                    <img className="sub-title-line" src={subTitleLine} alt="line" />
                     <div className="title">조화</div>
                     <div className="desc">{ipsum2}</div>
                 </li>
@@ -93,19 +91,11 @@ function MainFrame(props){
                 </li>
 
                 <li className="item-img">대충 내려가는 길 이미지</li>
+
             </ul>
             
-            <div className="gnb">
-                <div className="item logo">&and</div>
-                <div className="item"><Link to="/introduction">소개</Link></div>
-                <div className="item"><Link to="/level/7">관람</Link></div>
-                <div className="item"><Link to="/store">스토어</Link></div>
-                <div className="item"><Link to="/staffsAndArtists">만든 사람들</Link></div>
-                <div className="item">
-                    <input type="text"/>
-                    <button >검색</button>
-                </div>
-            </div>
+            <GNB />
+
 
             <div className="level-guide">
                 <div className="index">
@@ -116,19 +106,8 @@ function MainFrame(props){
                     style={{left: `400px`}}></div>
             </div>
 
-            <div className={['navigation', navToggle ? 'navShow' : ''].join(' ')}>
-                <div className="title" onClick={toggleNav}>
-                    <div>층별안내</div>
-                    <div>{navToggle ? '닫기' : '열기'}</div>
-                </div>
-                <div className='item'>F6</div>
-                <div className="item">F5</div>
-                <div className="item">F4</div>
-                <div className="item">F3</div>
-                <div className="item">F2</div>
-                <div className="item">F1</div>
+            <Navigation />
 
-            </div>
         </div>
     );
 }
