@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/ATC2020/static/css/main.6c6e5cf5.chunk.css",
+    "main.js": "/ATC2020/static/js/main.c036a687.chunk.js",
+    "main.js.map": "/ATC2020/static/js/main.c036a687.chunk.js.map",
+    "runtime-main.js": "/ATC2020/static/js/runtime-main.794431f0.js",
+    "runtime-main.js.map": "/ATC2020/static/js/runtime-main.794431f0.js.map",
+    "static/css/2.11829350.chunk.css": "/ATC2020/static/css/2.11829350.chunk.css",
+    "static/js/2.7c1e5083.chunk.js": "/ATC2020/static/js/2.7c1e5083.chunk.js",
+    "static/js/2.7c1e5083.chunk.js.map": "/ATC2020/static/js/2.7c1e5083.chunk.js.map",
+    "index.html": "/ATC2020/index.html",
+    "precache-manifest.de7bcc00c9ae12590b82527a6080aebb.js": "/ATC2020/precache-manifest.de7bcc00c9ae12590b82527a6080aebb.js",
+    "service-worker.js": "/ATC2020/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/ATC2020/static/css/2.11829350.chunk.css.map",
+    "static/css/main.6c6e5cf5.chunk.css.map": "/ATC2020/static/css/main.6c6e5cf5.chunk.css.map",
+    "static/js/2.7c1e5083.chunk.js.LICENSE.txt": "/ATC2020/static/js/2.7c1e5083.chunk.js.LICENSE.txt",
+    "static/media/item-img.png": "/ATC2020/static/media/item-img.00408b3c.png",
+    "static/media/sub-title-line.png": "/ATC2020/static/media/sub-title-line.d0a1f9a2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.794431f0.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.7c1e5083.chunk.js",
+    "static/css/main.6c6e5cf5.chunk.css",
+    "static/js/main.c036a687.chunk.js"
+  ]
+}
