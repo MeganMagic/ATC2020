@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
-import {Link} from 'react-router-dom';
-import GNB2 from '../components/GNB2';
+// import {Link} from 'react-router-dom';
+import GNB from '../components/GNB';
 import '../css/Level.css';
 
 
@@ -15,7 +15,7 @@ function Level (props) {
 
     return(
         <div className="myContainer">
-            <GNB2 />
+            <GNB />
 
             <div className="level">{level}층</div>
 
@@ -26,13 +26,13 @@ function Level (props) {
                 </div>
 
                 <div className="item item-text">
-                    <img className="sub-title-line" src={subTitleLine} />
+                    <img className="sub-title-line" alt="" src={subTitleLine} />
                     <h1 className="sub-title">조화</h1>
                     <p className="text-content">{ipsum.slice(0,240)}</p>
                 </div>
                 
                 <div className="item item-entrance">
-                    <img className="img" src={itemIMG} />
+                    <img className="img" alt="" src={itemIMG} />
                     <div className="info">
                         <h3 className="title">title</h3>
                         <p className="desc">{ipsum.slice(0,50)}</p>
@@ -40,7 +40,7 @@ function Level (props) {
                 </div>
 
                 <div className="item item-entrance">
-                    <img className="img" src={itemIMG} />
+                    <img className="img" alt="" src={itemIMG} />
                     <div className="info">
                         <h3 className="title">title</h3>
                         <p className="desc">{ipsum.slice(0,50)}</p>
@@ -48,7 +48,7 @@ function Level (props) {
                 </div>
 
                 <div className="item item-entrance">
-                    <img className="img" src={itemIMG} />
+                    <img className="img" alt="" src={itemIMG} />
                     <div className="info">
                         <h3 className="title">title</h3>
                         <p className="desc">{ipsum.slice(0,50)}</p>
