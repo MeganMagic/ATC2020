@@ -12,7 +12,7 @@ function App() {
     <HashRouter>
       <Route path="/" exact={true} component={Home2} />
       <Route path="/Level/:num" exact component={Level} />
-      <Route path="/Level2/:num" exact component={Level2} />
+      <Route path="/Level2" exact component={Level2} />
 
     </HashRouter>
   );
