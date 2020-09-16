@@ -35,7 +35,6 @@ function MainFrame(props){
         <div className="mainFrame">
             <ul className="content" ref={myRef} onWheel={scrollChanger}>
                 {props.children}
-                <li className="item-img next">대충 내려가는 길 이미지</li>
             </ul>
             
             <GNB />
