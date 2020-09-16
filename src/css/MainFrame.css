@@ -8,68 +8,16 @@
     white-space: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    position : relative;
+    z-index : 1;
 }
 .mainFrame ul li {
-    width : 300px;
     display: inline-block;
     white-space: pre-line;
     vertical-align: top;
     padding-top : 80px;
 }
-/* ------------------------------------------------- */
-.mainFrame .content .item-text {
-    width : 330px;
-    margin-right : 117px;
-}
-.mainFrame .content .item-text .title{
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-.mainFrame .content .item-text .desc{
-    font-size : 16px;
-    line-height: 1.5;
-}
-.mainFrame .content .item-text .sub-title-line {
-    width : 120px;
-    margin-top : 90px;
-    margin-bottom: 18px;
-    position : relative;
-    left : -15px;
-}
-
-
-.mainFrame .content .item-img{
-    width : 600px;
-    margin-right: 103px;
-}
-.mainFrame .content .item-img .entrance{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-.mainFrame .content .item-img .entrance .thumbnail{
-    width : 360px;
-    margin-right: 18px;
-}
-.mainFrame .content .item-img .entrance .info{
-    display: block;
-    width : 360px;
-}
-.mainFrame .content .item-img .entrance .info .title{
-    font-size : 24px;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-.mainFrame .content .item-img .entrance .info .desc{
-    font-size : 12px;
-}
-
-
-.mainFrame .content .item-title{
-    margin-left : 224px;
-}
-
 
 /* ---------------------------------------- */
 .mainFrame .level-guide{
@@ -103,12 +51,3 @@
     position: relative;
 }
 /* -------------------------------------------------------- */
-.mainFrame .level{
-    font-size: 120px;
-    font-weight: bold;
-    position: absolute;
-    top : 0px;
-    
-    color : white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
