@@ -5,6 +5,8 @@ import queryString from 'query-string';
 import MainFrame from '../components/MainFrame';
 import Item from '../components/Item';
 
+
+
 const getQueryData = (props) => {
     const {search} = props.location;
     const queryObj = queryString.parse(search);
