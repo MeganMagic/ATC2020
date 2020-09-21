@@ -1,6 +1,5 @@
 import React, {useRef, Fragment} from 'react';
 import axios from 'axios';
-import '../css/Level1.css';
 
 const sendResponse =  (e, nameRef, messRef) => {
     e.preventDefault();
@@ -8,12 +7,15 @@ const sendResponse =  (e, nameRef, messRef) => {
     axios.get(
         "https://script.google.com/macros/s/AKfycbwSALIdVZMx0-U5DOfi-Ivm6Pq8uyhO0bf_4RXeljUVk2r6BWc/exec",
         { params : {
-            "이름": nameRef.current.value,
-            "메세지": messRef.current.value
+            "이름": JSON.stringify(nameRef.current.value),
+            "메세지": JSON.stringify(messRef.current.value)
             }
         }
     )
-    .then( (res) =>  console.log(res.data) ); 
+    .then( (res) =>  console.log(res.data) )
+    .catch(error => {
+        console.log(error);
+     });
 
     //clear
     nameRef.current.value = '';
