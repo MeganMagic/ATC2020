@@ -12,6 +12,9 @@
     position : relative;
     z-index : 1;
 }
+@media (max-width : 786px){
+    .mainFrame ul{ overflow-x : scroll; }
+}
 .mainFrame ul li {
     display: inline-block;
     white-space: pre-line;
