@@ -20,7 +20,11 @@
     font-weight: bold;
     color : #191918;
 }
-.mainFrame .gnb .item:first-child {
+.mainFrame .gnb .logo {
     font-size: 32px;
     color : white;
+}
+
+.mainFrame .gnb .menu-hide {
+    display: none;
 }
