@@ -1,0 +1,119 @@
+#home{
+    background-color: white;
+    text-align: center;
+
+}
+#home .frame{
+    width : 1047px;
+    height : 102vh;
+    background-color: #efeeee;
+    border: 1px solid #7b7b7b;
+    margin : 0 auto;
+
+    position: relative;
+    top : -1vh;
+    overflow : hidden;
+
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+}
+#home .frame .title{
+    width: 953px;
+    height: 74px;
+    border-radius: 18px;
+    border: solid 1px #7b7b7b;
+    background-color: #e17140;
+
+    margin-top : 51px;
+
+    padding : 0 24px;
+    display: flex;
+    align-items: center;
+}
+#home .frame .title .title-text{
+    color : white;
+    font-size : 30px;
+    font-weight: bold;
+    text-align: left;
+} 
+
+#home .frame .pillar{
+    width : 917px;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#home .frame .pillar .item{
+    width : 20px;
+    height : 59px;
+    border-left: solid 1px #7b7b7b;
+    border-right: solid 1px #7b7b7b;
+}
+
+#home .frame .divider{
+    width: 953px;
+    height: 22px;
+    border-radius: 11px;
+    border: solid 1px #7b7b7b;
+    background-color: #efeeee;
+}
+
+#home .frame .floor{
+    width : 931px;
+    height : 214px;
+    background-color: #efeeee;
+    border-left: solid 1px #7b7b7b;
+    border-right: solid 1px #7b7b7b;
+    
+    display : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    overflow : hidden;
+}
+#home .frame .floor-top{
+    background-color: white;
+}
+#home .frame .floor .window{
+    width : 200px;
+    height : 100%;
+    border-left: solid 1px #7b7b7b;
+    border-right: solid 1px #7b7b7b;
+    background-color: white;
+    overflow : hidden;
+}
+#home .frame .floor .window-top{
+    height : fit-content;
+}
+#home .frame .floor .wall{
+    background-color: #efeeee;
+    height : 40px;
+    width: 44px;
+    border-bottom : 1px solid #7b7b7b;
+    transition : height 0.5s ease-in;
+}
+#home .frame .floor .window .shutter{
+    width : 100%;
+    height : 13px;
+
+    background-color: white;
+    border-top: 1px solid #7b7b7b;
+    border-bottom : 6px solid black;
+    position : relative;
+    top : 0px;
+    z-index : 3;
+}
+#home .frame .floor .window .curtain{
+    width : 100%;
+    height : 27px;
+    transition : height 0.5s ease-in;
+}
+
+#home .frame .floor .window .green { background-color: #3dd429; }
+#home .frame .floor .window .black { background-color: black; }
+
+#home .frame .floor .windowActive:hover > .curtain{ height : 201px; }
+#home .frame .floor-top:hover > .window .curtain{ height : 201px;}
+#home .frame .floor-top:hover > .wall { height: 215px; }
+
+
