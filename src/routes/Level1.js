@@ -1,5 +1,6 @@
 import React, {useRef, Fragment} from 'react';
 import axios from 'axios';
+// import DocsData from '../components/DocsData';
 
 const sendResponse =  (e, nameRef, messRef) => {
     e.preventDefault();
@@ -21,7 +22,6 @@ const sendResponse =  (e, nameRef, messRef) => {
     nameRef.current.value = '';
     messRef.current.value = '';
 };
-
 const getSheetData = (key) =>  {
     const url = `https://docs.google.com/spreadsheets/d/${key}/gviz/tq?`;
     axios.get(url)
@@ -34,8 +34,14 @@ const getSheetData = (key) =>  {
         console.log(JSON.parse(regexData).table.rows);
     } );
 };
-
-
+const getDocsData = (key) => {
+    const url = `https://script.google.com/macros/s/${key}/exec`;
+    axios.get(url)
+    .then((res) => {
+        console.log("DOCS!");
+        console.log(res.data.result);
+    });
+}
 
 
 function Level1(props){
@@ -43,7 +49,9 @@ function Level1(props){
     const messRef = useRef(null);
 
     const sheetKey = "1jabZBtATvQRy0035HlgBzq0nHq2nZ1025skCQDy1i78";
+    const docsKey = "AKfycbzFr6n2s4btj6liWhCL2IBFGEGPqwHg7Y1YlNQx_325MVP4cZDW";
     getSheetData(sheetKey);
+    getDocsData(docsKey);
 
     return( 
         <Fragment>
