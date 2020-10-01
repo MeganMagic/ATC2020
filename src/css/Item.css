@@ -37,6 +37,8 @@
 }
 .mainFrame .content .item-entrance .thumbnail{
     width : 360px;
+    /* image높이로 height 설정하기 */
+    height : 485px;
     margin-right: 18px;
 }
 .mainFrame .content .item-entrance .info{
