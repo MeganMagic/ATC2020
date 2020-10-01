@@ -1,7 +1,8 @@
 .mainFrame .gnb{
     width : 100%;
     height : 56px;
-    background-color: #3dd429;
+    background-color: transparent;
+    border-bottom: 1px solid black;
 
     position : fixed;
     top : 0px;
@@ -23,6 +24,7 @@
 .mainFrame .gnb .logo {
     font-size: 32px;
     color : white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .mainFrame .gnb .menu-hide {
