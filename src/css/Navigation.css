@@ -10,10 +10,11 @@
     bottom : -268px;
     right : 21px;
 
-    overflow: scroll;
+    overflow: hidden;
 }
 .mainFrame .navShow{
     bottom : 35px;
+    overflow: scroll;
 }
 
 .mainFrame .navigation .title{
@@ -22,7 +23,7 @@
     font-size : 13px;
     font-weight: bold;
     padding : 0 18px;
-    background-color: #3dd429;
+    background-color: #dddddd;
     
     display : flex;
     flex-direction: row;
