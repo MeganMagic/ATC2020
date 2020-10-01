@@ -46,6 +46,7 @@ function Home2(props){
                     <div className='window window-top' >
                         <div className='curtain green'></div>
                         <div className='shutter'></div>
+                        <div className="text">관람하기</div>
                     </div>
                     <div className="wall"></div>
                     <div className='window window-top' >
