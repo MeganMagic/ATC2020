@@ -27,7 +27,7 @@ const getSheetData = (key) =>  {
     axios.get(url)
     .then((res) => {
         const data = res.data.split('\n')[1];
-        const queryFrame = /google\.visualization\.Query\.setResponse\((.*)\)\;/;
+        const queryFrame = /google\.visualization\.Query\.setResponse\((.*)\)/;
         const regexData = queryFrame.exec(data)['1'];
         
         console.log(data);

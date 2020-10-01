@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import './css/App.css';
 
-import Home2 from './routes/Home2';
+import Home3 from './routes/Home3';
 import Level from './routes/Level';
 
 import Level6 from './routes/Level6';
@@ -15,7 +15,7 @@ import Detail from './routes/Detail';
 function App() {
   return (
     <HashRouter>
-      <Route path="/" exact={true} component={Home2} />
+      <Route path="/" exact={true} component={Home3} />
       <Route path="/Level/:num" exact component={Level} />
       <Route path="/Level2" exact component={Level2} />
       <Route path="/Level1" exact component={Level1} />
