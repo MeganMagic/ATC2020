@@ -30,7 +30,6 @@ function MainFrame(props){
     const levelIndex = [6, '치즈', '투영', '이 게임은 처음부터 내가 졌어', 'DreamCatcher', 7];
 
 
-
     return(
         <div className="mainFrame">
             <ul className="content" ref={myRef} onWheel={scrollChanger}>
