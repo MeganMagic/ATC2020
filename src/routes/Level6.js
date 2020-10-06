@@ -88,15 +88,15 @@ class Level6 extends React.Component{
                 <li className="level">{this.state.level}층</li>
 
                 <Item head
-                    title = {data[0][2].v}
+                    title = {data[0][1].v}
                     desc = {data[0][3].v}
                 />
                 <Item sub
-                    title = {data[1][2].v}
+                    title = {data[1][1].v}
                     desc = {data[1][3].v}
                 />
                 <Item entrance
-                    title={data[1][2].v}
+                    title={data[1][1].v}
                     desc={data[1][3].v}
 
                     entranceLevel = {data[2][2].v}
