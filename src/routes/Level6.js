@@ -18,6 +18,7 @@ class Level6 extends React.Component{
 
     parseGoogleSpreadsheetData = (data) => {
         const queryFrame = /google\.visualization\.Query\.setResponse\((.*)\)\;/;
+        console.log(data);
         const myData = JSON.parse(
             queryFrame.exec(
                 data.split('\n')[1]
