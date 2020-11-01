@@ -5,7 +5,7 @@ import './css/App.css';
 import Home3 from './routes/Home3';
 import Level from './routes/Level';
 
-import Level6 from './routes/Level6';
+import Level6 from './routes/Level6_ver2';
 import Level2 from './routes/Level2';
 import Level1 from './routes/Level1';
 
