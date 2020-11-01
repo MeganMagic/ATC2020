@@ -40,11 +40,8 @@ class Level6 extends React.Component{
         axios.get( getUrl(this.state.keyLevel) ) 
         .then( (res) => {
             //1. data 가져오기, 가공
-            console.log(res);
             const { data } = res;
-            console.log(data);
             const levelData = parseGoogleSpreadsheetData(data, this.state.level);
-            console.log(levelData);
 
             //2. 데이터 저장, 로딩 종료
             this.setState({
@@ -86,15 +83,15 @@ class Level6 extends React.Component{
         let title="";
         let desc="";
 
-        const headElement = (data) => (
-            <Item head title = {data[2].v} desc = {data[3].v} />
+        const elementHead = (title, desc) => (
+            <Item head title = {title} desc = {desc} />
         );
-        const subElement = (data) => (
-            <Item sub title = {data[2].v} desc = {data[3].v} />
+        const elementSub = (title, desc) => (
+            <Item sub title = {title} desc = {desc} />
         );
 
-        const entrance = (data) => {
-            const entranceId = data[2].v;
+        const elementEntrance = (ID) => {
+            const entranceId = ID;
             console.log(entranceId);
             console.log(this.state.itemData);
             const entranceData = this.state.itemData.filter((x) => x[1].v === entranceId);
@@ -144,8 +141,8 @@ class Level6 extends React.Component{
 
             </Fragment>
         );
+
         
-        console.log(this.state);
         parseGoogleDriveLink('https://drive.google.com/file/d/1UseOkQjZu9b25VLDTxupUJnTBVzEM3qi/view?usp=sharing');
         return(
             <MainFrame>
