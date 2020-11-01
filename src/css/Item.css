@@ -86,3 +86,19 @@
     color : white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.mainFrame .content .item-intro{
+    padding-top : 0px;
+    padding-bottom : 100px;
+    height: 100%;
+}
+.mainFrame .content .intro-img{
+    height : 80%;
+    vertical-align: middle;
+}
+
+.flex-vertical-wrapper {
+    height : 100%;
+    display: flex;
+    align-items: center;
+}
