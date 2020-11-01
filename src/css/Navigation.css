@@ -2,7 +2,7 @@
     width : 472px;
     height : 317px;
     z-index : 5;
-    border: solid 1px #191918;
+    border: solid 2px;
     background-color: white;
 
     position: fixed;
@@ -23,7 +23,6 @@
     font-size : 13px;
     font-weight: bold;
     padding : 0 18px;
-    background-color: #dddddd;
     
     display : flex;
     flex-direction: row;
@@ -33,8 +32,7 @@
 .mainFrame .navigation .item{
     height : auto;
     padding : 14px 23px;
-    border-top: 1px solid black;
-    color : #191918;
+    border-top: 1px solid ;
 
     display : flex;
     flex-direction: row;

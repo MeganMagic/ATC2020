@@ -31,19 +31,19 @@ function MainFrame(props){
 
 
     return(
-        <div className="mainFrame">
+        <div className="mainFrame" style={{color:props.color}}>
             <ul className="content" ref={myRef} onWheel={scrollChanger}>
                 {props.children}
             </ul>
             
-            <GNB />
-            <Navigation />
+            <GNB color = {props.color}/>
+            <Navigation color = {props.color}/>
 
             <div className="level-guide">
                 <div className="index">
                     {levelIndex.map( (title, index) => <div key={index}>{title}</div>)}
                 </div>
-                <div className="bar"></div>
+                <div className="bar" style={{backgroundColor:props.color}}></div>
                 <div className="slider" 
                     style={{left: `400px`}}></div>
             </div>

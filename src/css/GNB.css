@@ -2,7 +2,7 @@
     width : 100%;
     height : 56px;
     background-color: transparent;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid ;
 
     position : fixed;
     top : 0px;
@@ -19,7 +19,6 @@
 .mainFrame .gnb .item {
     font-size: 18px;
     font-weight: bold;
-    color : #191918;
 }
 .mainFrame .gnb .logo {
     font-size: 32px;

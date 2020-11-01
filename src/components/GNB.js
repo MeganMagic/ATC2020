@@ -44,7 +44,7 @@ function GNB(props){
     ;
     
     return (
-        <div className="gnb">
+        <div className="gnb" style={{color:props.color, borderColor: props.color}}>
             {element}
         </div>
     );

@@ -10,7 +10,7 @@ function Navigation(props){
     }
     
     return(
-        <div className={['navigation', navToggle ? 'navShow' : ''].join(' ')}>
+        <div className={['navigation', navToggle ? 'navShow' : ''].join(' ')} style={{color:props.color, borderColor:props.color}}>
                 <div className="title" onClick={toggleNav}>
                     <div>층별안내</div>
                     <div>{navToggle ? '닫기' : '열기'}</div>
