@@ -31,14 +31,16 @@ function GNB(props){
         </React.Fragment>
     :  
         <React.Fragment>
-            <div className="item logo">&and</div>
+            <div className="item logo">
+                <img className="img" alt="logo" src={require('../data/logo.png')} />
+            </div>
             <div className="item"><Link to="/introduction">소개</Link></div>
             <div className="item"><Link to="/level/7">관람</Link></div>
             <div className="item"><Link to="/store">스토어</Link></div>
             <div className="item"><Link to="/staffsAndArtists">만든 사람들</Link></div>
-            <div className="item">
-                <input type="text"/>
-                <button >검색</button>
+            <div className="item search" style={{color:props.color, borderColor:props.color}}>
+                <input className="input" type="text"/>
+                <button className="searchBtn">검색</button>
             </div>
         </React.Fragment>
     ;

@@ -21,11 +21,21 @@
     font-weight: bold;
 }
 .mainFrame .gnb .logo {
-    font-size: 32px;
-    color : white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    height: 28px;
+}
+.mainFrame .gnb .logo .img{
+    height : 100%;
 }
 
 .mainFrame .gnb .menu-hide {
     display: none;
+}
+
+.mainFrame .gnb .search{
+    border-bottom: 1px solid;
+    height : 34px;
+}
+.mainFrame .gnb .search .input{
+    height : 100%;
+    margin : 5px;
 }
