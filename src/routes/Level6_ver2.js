@@ -10,6 +10,30 @@ const parsingData = (jsonData) => {
     return myData;
 }
 
+const getWorkData = (workID, key) => {
+    const urlQuery = `SELECT+B%2c+C%2c+D%2c+H+WHERE+B%3d%22${workID}%22`;
+    const url = `https://docs.google.com/spreadsheets/d/${key}/gviz/tq?tq=${urlQuery}`;
+    const promise = axios.get(url).then( (res) => 
+        parsingData(res.data)
+    )
+    .catch( (error) => { console.log(error); })
+
+    promise.then( x =>  {
+        return( {
+            title : x[0][1].v,
+            desc : x[0][2].v,
+            imgSrc : x[0][3].v
+        } )
+    })
+    // const fineData = {
+    //     title : mydata[0][1].v,
+    //     desc : mydata[0][2].v,
+    //     imgSrc : mydata[0][3].v
+    // }
+
+    // return(fineData);
+}
+
 class Level6 extends React.Component{
     constructor(props){
         super(props);
@@ -45,6 +69,26 @@ class Level6 extends React.Component{
         })
     }
 
+    
+    entranceElement(workID){
+        const urlQuery = `SELECT+B%2c+C%2c+D%2c+H+WHERE+B%3d%22${workID}%22`;
+        const url = `https://docs.google.com/spreadsheets/d/${this.state.keyOfItemData}/gviz/tq?tq=${urlQuery}`;
+        let mydata = [];
+        axios.get(url).then( (result) => {
+            const {data} = result;
+            const itemData = parsingData(data);
+            mydata.push(itemData[0]);
+        })
+        .catch( (error) => { console.log(error); })
+        
+        return( 
+            <Item entrance 
+                entranceId={workID} entranceLevel={this.state.level}
+                title={mydata[0][1].v} desc={mydata[0][2].v} imgSrc={mydata[0][3].v}
+            />
+        );
+
+    }
 
     returnLoadingPage(){
         return(
@@ -52,8 +96,10 @@ class Level6 extends React.Component{
         );
     }
     
-    render(){
-        const element = (
+    returnElement(){
+        const temp = getWorkData("work-1", this.state.keyOfItemData);
+        console.log(temp);
+        return(
             <Fragment>
                 <li className="item-intro">
                     <div className="flex-vertical-wrapper">
@@ -61,15 +107,38 @@ class Level6 extends React.Component{
                     </div>
                 </li>
 
-                <Item head title="조화" desc="입숨" />
+                <Item head 
+                    title={this.state.levelData[0][1].v} 
+                    desc={this.state.levelData[0][2].v} />
+
+                <Item entrance 
+                    entranceID = {this.state.levelData[2][1].v} entranceLevel = {this.state.level}
+                />
+
+                {this.state.levelData.map((data, i) => {
+                    return(
+                        data[0].v === "head" ?
+                            <Item head title={data[1].v} desc={data[2].v} key={i}/>
+                        : data[0].v === "sub" ?
+                            <Item sub title={data[1].v} desc={data[2].v} key={i}/>
+                        : data[0].v ==="entrance" ? 
+                            <Item entrance entranceId={data[0].v} entranceLevel={this.state.level}    
+                                {...getWorkData(data[1].v, this.state.keyOfItemData)}
+                            />
+                        : <li></li>
+                    )
+                })}
             </Fragment>
         );
+    }
 
+
+    render(){
         console.log(this.state);
         return(
             <MainFrame color="#ce5e32">
                 {this.state.isLoading ? this.returnLoadingPage() 
-                    : element
+                    : this.returnElement()
                 }
             </MainFrame>
         );
