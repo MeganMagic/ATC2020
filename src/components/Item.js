@@ -31,19 +31,7 @@ function Item({title, desc, head, sub, entrance, detailHead, detailImg, artists,
             </div>
         </li>
     );
-    const detailHeadFrame = (
-        <li className="item-text item-detail-head">
-            <div className="title">{title}</div>
-            <div className="artists"> { detailHead ? artists.join(` `) : '' } </div>
-            <div className="desc">{desc}</div>
-        </li>
-    );
 
-    const detailImgFrame = (
-        <li className="item-img">
-            <img className="detail-img" alt="detail" src={imgSrc} />
-        </li>
-    );
     const defaultFrame = (
         <li className="item-text item-title">
             <div className="title">{title}</div>
@@ -56,8 +44,6 @@ function Item({title, desc, head, sub, entrance, detailHead, detailImg, artists,
         head? headFrame : 
         sub? subFrame :
         entrance? entranceFrame:
-        detailHead? detailHeadFrame :
-        detailImg? detailImgFrame :
         defaultFrame
     );
 }
