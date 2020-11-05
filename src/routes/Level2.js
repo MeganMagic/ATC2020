@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MainFrame from '../components/MainFrame';
+import MainFrame from '../components/Lobby';
 import Item from '../components/Item';
 
 function Level2 (props) {

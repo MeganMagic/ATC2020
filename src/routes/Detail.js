@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/Detail.css';
 import queryString from 'query-string';
 
-import MainFrame from '../components/MainFrame';
+import MainFrame from '../components/Lobby';
 import Item from '../components/Item';
 
 

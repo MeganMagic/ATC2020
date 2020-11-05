@@ -11,14 +11,13 @@ const parsingData = (jsonData) => {
     return myData;
 }
 
-
-class Level6 extends React.Component{
+class Level5 extends React.Component{
     state = {
         isLoading : true,
         isError : false,
         keyOfLevelData : '1i4DrB3mIM3yF6XUs_5hHO04-TGrbY2HtqUuJomCp-C4',
         keyOfWorksData : '1lW9xsfxeghuknmVyrVNrkD9o-E9H4AbYiYy4dQ0aRCI',
-        level : 6
+        level : 5
     }
 
     getComps = async () => {
@@ -51,7 +50,7 @@ class Level6 extends React.Component{
             <Fragment>
                 <li className="item-intro">
                     <div className="flex-vertical-wrapper">
-                        <img className="intro-img" alt="독립적인" src={require('../data/level6.png')} />
+                        <img className="intro-img" alt="독립적인" src={require('../data/level5.png')} />
                     </div>
                 </li>
 
@@ -69,30 +68,20 @@ class Level6 extends React.Component{
                     title={works[1][1].v} desc={works[1][2].v} imgSrc={works[1][3].v}
                 />
 
-                <Item sub title={comps[4][1].v} desc={comps[4][2].v} />
-
                 <Item entrance 
-                    entranceID = {comps[5][1].v} entranceLevel = {this.state.level}
+                    entranceID = {comps[4][1].v} entranceLevel = {this.state.level}
                     title={works[2][1].v} desc={works[2][2].v} imgSrc={works[2][3].v}
                 />
 
                 <Item entrance 
-                    entranceID = {comps[6][1].v} entranceLevel = {this.state.level}
+                    entranceID = {comps[5][1].v} entranceLevel = {this.state.level}
                     title={works[3][1].v} desc={works[3][2].v} imgSrc={works[3][3].v}
                 />
 
-                <Item entrance 
-                    entranceID = {comps[7][1].v} entranceLevel = {this.state.level}
-                    title={works[4][1].v} desc={works[4][2].v} imgSrc={works[4][3].v}
-                />
-
-                <Item entrance 
-                    entranceID = {comps[8][1].v} entranceLevel = {this.state.level}
-                    title={works[5][1].v} desc={works[5][2].v} imgSrc={works[5][3].v}
-                />
                 <li className="item">
                     <Link to={{
-                        pathname : "./level5"
+                        pathname : "./level5",
+                        state : {level:4}
                     }}>
                         다음 층으로
                     </Link>
@@ -107,7 +96,7 @@ class Level6 extends React.Component{
     render(){
         console.log(this.state);
         return(
-            <MainFrame level={6} color="#ce5e32">
+            <MainFrame color="#518C31">
                 {this.state.isLoading ? this.returnLoadingPage() 
                     : this.returnElement()
                 }
@@ -117,4 +106,4 @@ class Level6 extends React.Component{
 
 }
 
-export default Level6;
+export default Level5;
