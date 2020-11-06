@@ -33,17 +33,12 @@ const Lobby2 = (props) => {
     const [level, setLevel] = useState(6);
     const [data, setData] = useState();
 
-    const getData = async () => {
-        const keyOfLevelData = '1i4DrB3mIM3yF6XUs_5hHO04-TGrbY2HtqUuJomCp-C4';
-        const keyOfWorksData = '1lW9xsfxeghuknmVyrVNrkD9o-E9H4AbYiYy4dQ0aRCI';
+    const keyOfLevelData = '1i4DrB3mIM3yF6XUs_5hHO04-TGrbY2HtqUuJomCp-C4';
+    axios.get(`https://docs.google.com/spreadsheets/d/${keyOfLevelData}/gviz/tq?tq=SELECT+B%2c+C%2c+D+WHERE+A%3d${level}`)
+    .then((res) => {
+        console.log(res);
         
-        const getComps = await axios.get(`https://docs.google.com/spreadsheets/d/${keyOfLevelData}/gviz/tq?tq=SELECT+B%2c+C%2c+D+WHERE+A%3d${level}`);
-        const comps = parsingData(getComps.data);
-        const getWorks = await axios.get(`https://docs.google.com/spreadsheets/d/${keyOfWorksData}/gviz/tq?tq=SELECT+B%2c+C%2c+D%2c+H+WHERE+A%3d${level}`);
-        const works = parsingData(getWorks.data)
-    }
-
-    console.log(getData());
+    })
 
 
     const scrollChanger = useGaroScroll();
