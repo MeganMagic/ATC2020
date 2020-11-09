@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/ATC2020/static/css/main.dc2fc280.chunk.css",
-    "main.js": "/ATC2020/static/js/main.b2727e5e.chunk.js",
-    "main.js.map": "/ATC2020/static/js/main.b2727e5e.chunk.js.map",
+    "main.css": "/ATC2020/static/css/main.fed2630c.chunk.css",
+    "main.js": "/ATC2020/static/js/main.f2daddbb.chunk.js",
+    "main.js.map": "/ATC2020/static/js/main.f2daddbb.chunk.js.map",
     "runtime-main.js": "/ATC2020/static/js/runtime-main.b8224b02.js",
     "runtime-main.js.map": "/ATC2020/static/js/runtime-main.b8224b02.js.map",
     "static/css/2.11829350.chunk.css": "/ATC2020/static/css/2.11829350.chunk.css",
-    "static/js/2.76d5b991.chunk.js": "/ATC2020/static/js/2.76d5b991.chunk.js",
-    "static/js/2.76d5b991.chunk.js.map": "/ATC2020/static/js/2.76d5b991.chunk.js.map",
+    "static/js/2.aa416eca.chunk.js": "/ATC2020/static/js/2.aa416eca.chunk.js",
+    "static/js/2.aa416eca.chunk.js.map": "/ATC2020/static/js/2.aa416eca.chunk.js.map",
     "index.html": "/ATC2020/index.html",
-    "precache-manifest.d7f04d3602ecc1fa13becb9a6633d394.js": "/ATC2020/precache-manifest.d7f04d3602ecc1fa13becb9a6633d394.js",
+    "precache-manifest.644368ce074b43649d2b45d01c1bf018.js": "/ATC2020/precache-manifest.644368ce074b43649d2b45d01c1bf018.js",
     "service-worker.js": "/ATC2020/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/ATC2020/static/css/2.11829350.chunk.css.map",
-    "static/css/main.dc2fc280.chunk.css.map": "/ATC2020/static/css/main.dc2fc280.chunk.css.map",
-    "static/js/2.76d5b991.chunk.js.LICENSE.txt": "/ATC2020/static/js/2.76d5b991.chunk.js.LICENSE.txt",
+    "static/css/main.fed2630c.chunk.css.map": "/ATC2020/static/css/main.fed2630c.chunk.css.map",
+    "static/js/2.aa416eca.chunk.js.LICENSE.txt": "/ATC2020/static/js/2.aa416eca.chunk.js.LICENSE.txt",
     "static/media/holder.jpeg": "/ATC2020/static/media/holder.accbb055.jpeg",
-    "static/media/item-img.png": "/ATC2020/static/media/item-img.b6a2f759.png",
+    "static/media/level2.png": "/ATC2020/static/media/level2.c148eceb.png",
+    "static/media/level3.png": "/ATC2020/static/media/level3.2eab86c8.png",
+    "static/media/level4.png": "/ATC2020/static/media/level4.be3366ee.png",
     "static/media/level5.png": "/ATC2020/static/media/level5.441f4487.png",
     "static/media/level6.png": "/ATC2020/static/media/level6.7d7b62a6.png",
     "static/media/logo.png": "/ATC2020/static/media/logo.d04ae796.png",
@@ -25,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.b8224b02.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.76d5b991.chunk.js",
-    "static/css/main.dc2fc280.chunk.css",
-    "static/js/main.b2727e5e.chunk.js"
+    "static/js/2.aa416eca.chunk.js",
+    "static/css/main.fed2630c.chunk.css",
+    "static/js/main.f2daddbb.chunk.js"
   ]
 }
