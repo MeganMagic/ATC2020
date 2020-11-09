@@ -10,7 +10,7 @@ function Home3(props){
             <div className="logo">ATC2020:AND</div>
             <div className="line"></div>
 
-            <Link to="/level6">
+            <Link to="/Lobby2">
             <div className="section enter">
                 <div>관람하기</div>
             </div>
