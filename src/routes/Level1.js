@@ -55,6 +55,7 @@ function Level1(props){
 
     return( 
         <Fragment>
+            <h1>LEVEL 1 BYEBYE~~~</h1>
             <div>
                 <label htmlFor="name">이름</label>
                 <input type="text" id="name" name="name" ref={nameRef} />
