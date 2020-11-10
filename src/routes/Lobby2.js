@@ -2,7 +2,6 @@ import React, {useState, useRef, useEffect, Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import GNB from '../components/GNB';
 import Navigation from '../components/Navigation';
-import Item from '../components/Item';
 import '../css/Lobby.css';
 
 import useScrollChange from '../components/useScrollChange';
@@ -33,7 +32,13 @@ const Lobby2 = (props) => {
     //Hooks call
     const scrollChanger = useScrollChange();
     const { comps, works, loading, error, refetch } = useAxiosTwice({compsUrl : compsUrl(level), worksUrl : worksUrl(level)}, axios);
+    const [show, setShow] = useState()
+    useEffect(()=>{
+        document.body.style.overflow = "hidden";
+    }, [])
 
+
+    //elements
     const moveNextLevel = async() => {
         setLevel(level => level - 1);
         refetch();
@@ -48,31 +53,36 @@ const Lobby2 = (props) => {
             <li>go to level 1</li>
         </Link>
     );
-
-    if(loading) { return( <div>loading...</div>)}
-    if(error) { return( <div>error!</div>)}
-    console.log(comps);
-    return(
+    const loadingPage = () => (
         <div className="mainFrame" style={{color:colorArray[level]}}>
-            <ul className="content" {...scrollChanger} >
-                <li>{level}</li>
+            <h1>{level}층</h1>
+        </div>
+    )
+
+    if(error) { return(<div>error!</div>)}
+    if(loading) { 
+        return loadingPage()
+    }
+
+    const element = (
+        <div className="mainFrame" style={{color:colorArray[level]}}>
+            <ul className="content" {...scrollChanger}>
                 <li className="item-intro">
                     <div className="flex-vertical-wrapper">
                         <img className="intro-img" alt="독립적인" src={require(`../data/level${level}.png`)} />
                     </div>
                 </li>
-
-
                 {levelObject[level - 2](level, comps, works)}
-
                 {nextElement()}
             </ul>
-
             <GNB />
             <Navigation />
-
         </div>
-    );
+    )
+
+    return(
+        element
+    )
 }
 
 export default Lobby2;
