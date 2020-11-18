@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect, Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useParams, useHistory} from 'react-router-dom';
 import GNB from '../components/GNB';
 import Navigation from '../components/Navigation';
 import '../css/Lobby.css';
@@ -22,20 +22,20 @@ const colorArray = [ null, null, "#161616", "#CC6865", "#4386B7", "#518C31", "#C
 
 const Lobby2 = (props) => {
     //level
-    const {search} = props.location;
-    const [level, setLevel] = useState(
-        search && queryStirng.parse(search).level ? 
-        queryStirng.parse(search).level
-        : 6
-    );
+    let { myLevel } = useParams();
+    const [level, setLevel] = useState(myLevel);
 
     //Hooks call
     const scrollChanger = useScrollChange();
     const { comps, works, loading, error, refetch } = useAxiosTwice({compsUrl : compsUrl(level), worksUrl : worksUrl(level)}, axios);
     const [show, setShow] = useState()
+    let history = useHistory();
     useEffect(()=>{
         document.body.style.overflow = "hidden";
     }, [])
+    useEffect(()=>{
+        refetch();
+    }, [level])
 
 
     //elements
@@ -43,11 +43,10 @@ const Lobby2 = (props) => {
         setLevel(level => level - 1);
         refetch();
     }
+
     const nextElement = () => (
         level > 2 ?
-        <li onClick={moveNextLevel}>
-            next Level
-        </li> 
+        <Link to={`/level/${level-1}`}>next Level</Link>
         : 
         <Link to="/Level1">
             <li>go to level 1</li>
@@ -58,6 +57,7 @@ const Lobby2 = (props) => {
             <h1>{level}층</h1>
         </div>
     )
+    
 
     if(error) { return(<div>error!</div>)}
     if(loading) { 
@@ -66,13 +66,14 @@ const Lobby2 = (props) => {
 
     const element = (
         <div className="mainFrame" style={{color:colorArray[level]}}>
+            <h1>{ myLevel }</h1>
             <ul className="content" {...scrollChanger}>
                 <li className="item-intro">
                     <div className="flex-vertical-wrapper">
                         <img className="intro-img" alt="독립적인" src={require(`../data/level${level}.png`)} />
                     </div>
                 </li>
-                {levelObject[level - 2](level, comps, works)}
+                {levelObject[level - 2](comps, works)}
                 {nextElement()}
             </ul>
             <GNB />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Item.css';
 
-function Item({title, desc, head, sub, entrance, detailHead, detailImg, artists, imgSrc, entranceLevel, entranceId}){
+function Item({title, desc, head, sub, entrance, detailHead, detailImg, artists, imgSrc, entranceLevel, entranceID}){
     const subTitleLine = require('../data/sub-title-line.png');
 
     const headFrame = (
@@ -21,7 +21,7 @@ function Item({title, desc, head, sub, entrance, detailHead, detailImg, artists,
     const entranceFrame = (
         <li className="item-entrance">
             <div className="flex-row-wrapper">
-                <Link to={`/detail?level=${entranceLevel}&id=${entranceId}`}>
+                <Link to={`/level/${entranceLevel}/gallery/${entranceID}`}>
                     <img className="thumbnail" alt="thumbnail" src={imgSrc}></img>
                 </Link>
                 <div className="info">

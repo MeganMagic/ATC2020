@@ -1,26 +1,29 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { 
+  BrowserRouter as Router, 
+  Route, 
+  Switch
+ } from 'react-router-dom';
 import './css/App.css';
 
-import Home3 from './routes/Home3';
-
-import Lobby2 from './routes/Lobby2';
+import Home from './routes/Home3';
+import Lobby from './routes/Lobby2';
+import Level from './routes/Level';
 import Level1 from './routes/Level1';
-
 import Detail from './routes/Detail';
 import Gallery from './routes/Gallery';
+import Loading from './routes/Loading';
 
 
 
 function App() {
   return (
-    <Router>
+    <Router >
       <Switch>
-        <Route path="/" exact={true} component={Home3} />
-        <Route path="/Level1" exact component={Level1} />
-        <Route path="/Lobby/:level" exact component={Lobby2} />
-        <Route path="/detail" component={Detail} />
-        <Route path="/Gallery/:workId" exact component={Gallery} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/level/:level" component={Level} />   
+        <Route exact path="/loading" component={Loading} />
+        <Route exact path="/level/:level/gallery/:workID" component={Gallery} />
       </Switch>
     </Router>
   );
